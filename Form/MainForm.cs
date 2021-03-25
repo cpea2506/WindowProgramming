@@ -39,5 +39,11 @@ namespace QLSV
         {
 
         }
+
+        private void staticsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StaticsForm stf = new StaticsForm();
+            stf.Show();
+        }
     }
 }

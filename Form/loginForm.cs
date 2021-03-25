@@ -60,7 +60,7 @@ namespace QLSV
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Value += 5;
+            progressBar1.Value += 10;
             percent.Text = progressBar1.Value + "%";
             if (progressBar1.Value >= 100)
             {

@@ -50,11 +50,11 @@ namespace QLSV
             DateTime bdate = Bdate.Value;
             string phone = Phone.Text;
             string address = Address.Text;
-            string gender = "Male";
+            string gender = "Female";
 
             if(Male.Checked)
             {
-                gender = "Female";
+                gender = "Male";
             }
 
             MemoryStream pic = new MemoryStream();

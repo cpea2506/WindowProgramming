@@ -35,15 +35,16 @@ namespace QLSV
             uStdf.Show();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void staticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StaticsForm stf = new StaticsForm();
             stf.Show();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Print prt = new Print();
+            prt.Show();
         }
     }
 }

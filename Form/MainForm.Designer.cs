@@ -44,7 +44,6 @@ namespace QLSV
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sTUDENTToolStripMenuItem,
@@ -52,7 +51,8 @@ namespace QLSV
             this.sCOREToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1600, 40);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(722, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,71 +66,71 @@ namespace QLSV
             this.managaStudentFormToolStripMenuItem,
             this.printToolStripMenuItem});
             this.sTUDENTToolStripMenuItem.Name = "sTUDENTToolStripMenuItem";
-            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
+            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(68, 22);
             this.sTUDENTToolStripMenuItem.Text = "STUDENT";
             // 
             // addNewStudentToolStripMenuItem
             // 
             this.addNewStudentToolStripMenuItem.Name = "addNewStudentToolStripMenuItem";
-            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(470, 44);
+            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.addNewStudentToolStripMenuItem.Text = "Add New Student     CTRL + A";
             this.addNewStudentToolStripMenuItem.Click += new System.EventHandler(this.addNewStudentToolStripMenuItem_Click);
             // 
             // studentsListToolStripMenuItem
             // 
             this.studentsListToolStripMenuItem.Name = "studentsListToolStripMenuItem";
-            this.studentsListToolStripMenuItem.Size = new System.Drawing.Size(470, 44);
+            this.studentsListToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.studentsListToolStripMenuItem.Text = "Students list";
             this.studentsListToolStripMenuItem.Click += new System.EventHandler(this.studentsListToolStripMenuItem_Click);
             // 
             // staticsToolStripMenuItem
             // 
             this.staticsToolStripMenuItem.Name = "staticsToolStripMenuItem";
-            this.staticsToolStripMenuItem.Size = new System.Drawing.Size(470, 44);
+            this.staticsToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.staticsToolStripMenuItem.Text = "Statics";
             this.staticsToolStripMenuItem.Click += new System.EventHandler(this.staticsToolStripMenuItem_Click);
             // 
             // editRemoveToolStripMenuItem
             // 
             this.editRemoveToolStripMenuItem.Name = "editRemoveToolStripMenuItem";
-            this.editRemoveToolStripMenuItem.Size = new System.Drawing.Size(470, 44);
+            this.editRemoveToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.editRemoveToolStripMenuItem.Text = "Edit / Remove";
             this.editRemoveToolStripMenuItem.Click += new System.EventHandler(this.editRemoveToolStripMenuItem_Click);
             // 
             // managaStudentFormToolStripMenuItem
             // 
             this.managaStudentFormToolStripMenuItem.Name = "managaStudentFormToolStripMenuItem";
-            this.managaStudentFormToolStripMenuItem.Size = new System.Drawing.Size(470, 44);
+            this.managaStudentFormToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.managaStudentFormToolStripMenuItem.Text = "Manage Student Form";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(470, 44);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // cOURSEToolStripMenuItem
             // 
             this.cOURSEToolStripMenuItem.Name = "cOURSEToolStripMenuItem";
-            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(122, 36);
+            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(63, 22);
             this.cOURSEToolStripMenuItem.Text = "COURSE";
             // 
             // sCOREToolStripMenuItem
             // 
             this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
-            this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
+            this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
             this.sCOREToolStripMenuItem.Text = "SCORE";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(722, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Main Form";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

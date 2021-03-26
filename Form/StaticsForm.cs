@@ -20,28 +20,27 @@ namespace QLSV
 
         private void fillChart()
         {
+            STUDENT std = new STUDENT();
             MY_DB db = new MY_DB();
+
             db.openConnection();
-            DataSet ds = new DataSet();
             //query count number of female and male
-            SqlDataAdapter adpt = new SqlDataAdapter("SELECT gender, COUNT(id) AS amount FROM std GROUP BY gender", db.getConnection);
-            adpt.Fill(ds);
-            genderChart.DataSource = ds;
+            SqlCommand command = new SqlCommand("SELECT gender, COUNT(id) AS amount FROM std GROUP BY gender", db.getConnection);
+            genderChart.DataSource = std.getStudents(command);
 
             // Add value to male chart
             genderChart.Series["Gender"].XValueMember = "gender";
             genderChart.Series["Gender"].YValueMembers = "amount";
 
 
-            ds = new DataSet();
+            DataTable dt = new DataTable();
             //query count total number of gender
-            adpt = new SqlDataAdapter("SELECT COUNT(gender) FROM std", db.getConnection);
-            adpt.Fill(ds);
+            command = new SqlCommand("SELECT COUNT(gender) FROM std", db.getConnection);
+            dt = std.getStudents(command);
 
             // Add value to total student label
-            totalStd.Text = ds.Tables[0].Rows[0][0].ToString();
+            totalStd.Text = dt.Rows[0][0].ToString();
             
-
             db.closeConnection();
         }
 

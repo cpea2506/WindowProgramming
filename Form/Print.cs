@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,6 +77,19 @@ namespace QLSV
                     command.Parameters.Add("@gdr", SqlDbType.VarChar).Value = gender;
                     getTable(command);
                 }
+            }
+        }
+
+        private void ToPrinterBtn_Click(object sender, EventArgs e)
+        {
+            PrintDialog prdi = new PrintDialog();
+            prdi.ShowDialog();
+            PrintDocument prdo = new PrintDocument();
+            prdo.DocumentName = "Print Document";
+            prdi.Document = prdo;
+            if(prdi.ShowDialog() == DialogResult.OK)
+            {
+                prdo.Print();
             }
         }
     }

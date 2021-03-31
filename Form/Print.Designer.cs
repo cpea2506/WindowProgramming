@@ -44,6 +44,7 @@ namespace QLSV
             this.FirstDay = new System.Windows.Forms.DateTimePicker();
             this.LastDay = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.TableOfStd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +153,7 @@ namespace QLSV
             this.ToPrinterBtn.TabIndex = 8;
             this.ToPrinterBtn.Text = "To Printer";
             this.ToPrinterBtn.UseVisualStyleBackColor = false;
+            this.ToPrinterBtn.Click += new System.EventHandler(this.ToPrinterBtn_Click);
             // 
             // label1
             // 
@@ -214,6 +216,10 @@ namespace QLSV
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,5 +262,6 @@ namespace QLSV
         private System.Windows.Forms.DateTimePicker FirstDay;
         private System.Windows.Forms.DateTimePicker LastDay;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

@@ -46,5 +46,17 @@ namespace QLSV
             Print prt = new Print();
             prt.Show();
         }
+
+        private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewCourse csf = new AddNewCourse();
+            csf.Show();
+        }
+
+        private void removeCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveCourse rmc = new RemoveCourse();
+            rmc.Show();
+        }
     }
 }

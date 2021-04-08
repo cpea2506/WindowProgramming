@@ -115,6 +115,7 @@ namespace QLSV
             this.TableOfStd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TableOfStd.Location = new System.Drawing.Point(27, 97);
             this.TableOfStd.Name = "TableOfStd";
+            this.TableOfStd.RowHeadersWidth = 82;
             this.TableOfStd.Size = new System.Drawing.Size(1006, 367);
             this.TableOfStd.TabIndex = 5;
             // 
@@ -142,6 +143,7 @@ namespace QLSV
             this.SaveToTextBtn.TabIndex = 7;
             this.SaveToTextBtn.Text = "Save To Text File";
             this.SaveToTextBtn.UseVisualStyleBackColor = false;
+            this.SaveToTextBtn.Click += new System.EventHandler(this.SaveToTextBtn_Click);
             // 
             // ToPrinterBtn
             // 
@@ -187,6 +189,7 @@ namespace QLSV
             // 
             // FirstDay
             // 
+            this.FirstDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FirstDay.Location = new System.Drawing.Point(160, 48);
             this.FirstDay.Name = "FirstDay";
             this.FirstDay.Size = new System.Drawing.Size(182, 20);
@@ -195,6 +198,7 @@ namespace QLSV
             // 
             // LastDay
             // 
+            this.LastDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.LastDay.Location = new System.Drawing.Point(393, 47);
             this.LastDay.Name = "LastDay";
             this.LastDay.Size = new System.Drawing.Size(181, 20);
@@ -225,7 +229,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1059, 551);
+            this.ClientSize = new System.Drawing.Size(1057, 552);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ToPrinterBtn);
             this.Controls.Add(this.SaveToTextBtn);

@@ -39,6 +39,11 @@ namespace QLSV
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cOURSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sCOREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,46 +77,52 @@ namespace QLSV
             // addNewStudentToolStripMenuItem
             // 
             this.addNewStudentToolStripMenuItem.Name = "addNewStudentToolStripMenuItem";
-            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.addNewStudentToolStripMenuItem.Text = "Add New Student     CTRL + A";
+            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.addNewStudentToolStripMenuItem.Text = "Add New Student";
             this.addNewStudentToolStripMenuItem.Click += new System.EventHandler(this.addNewStudentToolStripMenuItem_Click);
             // 
             // studentsListToolStripMenuItem
             // 
             this.studentsListToolStripMenuItem.Name = "studentsListToolStripMenuItem";
-            this.studentsListToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.studentsListToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.studentsListToolStripMenuItem.Text = "Students list";
             this.studentsListToolStripMenuItem.Click += new System.EventHandler(this.studentsListToolStripMenuItem_Click);
             // 
             // staticsToolStripMenuItem
             // 
             this.staticsToolStripMenuItem.Name = "staticsToolStripMenuItem";
-            this.staticsToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.staticsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.staticsToolStripMenuItem.Text = "Statics";
             this.staticsToolStripMenuItem.Click += new System.EventHandler(this.staticsToolStripMenuItem_Click);
             // 
             // editRemoveToolStripMenuItem
             // 
             this.editRemoveToolStripMenuItem.Name = "editRemoveToolStripMenuItem";
-            this.editRemoveToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.editRemoveToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.editRemoveToolStripMenuItem.Text = "Edit / Remove";
             this.editRemoveToolStripMenuItem.Click += new System.EventHandler(this.editRemoveToolStripMenuItem_Click);
             // 
             // managaStudentFormToolStripMenuItem
             // 
             this.managaStudentFormToolStripMenuItem.Name = "managaStudentFormToolStripMenuItem";
-            this.managaStudentFormToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.managaStudentFormToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.managaStudentFormToolStripMenuItem.Text = "Manage Student Form";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // cOURSEToolStripMenuItem
             // 
+            this.cOURSEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCourseToolStripMenuItem,
+            this.removeCourseToolStripMenuItem,
+            this.editCourseToolStripMenuItem,
+            this.manageCourseToolStripMenuItem,
+            this.printToolStripMenuItem1});
             this.cOURSEToolStripMenuItem.Name = "cOURSEToolStripMenuItem";
             this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(63, 22);
             this.cOURSEToolStripMenuItem.Text = "COURSE";
@@ -121,6 +132,38 @@ namespace QLSV
             this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
             this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
             this.sCOREToolStripMenuItem.Text = "SCORE";
+            // 
+            // addCourseToolStripMenuItem
+            // 
+            this.addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
+            this.addCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addCourseToolStripMenuItem.Text = "Add Course";
+            this.addCourseToolStripMenuItem.Click += new System.EventHandler(this.addCourseToolStripMenuItem_Click);
+            // 
+            // removeCourseToolStripMenuItem
+            // 
+            this.removeCourseToolStripMenuItem.Name = "removeCourseToolStripMenuItem";
+            this.removeCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeCourseToolStripMenuItem.Text = "Remove Course";
+            this.removeCourseToolStripMenuItem.Click += new System.EventHandler(this.removeCourseToolStripMenuItem_Click);
+            // 
+            // editCourseToolStripMenuItem
+            // 
+            this.editCourseToolStripMenuItem.Name = "editCourseToolStripMenuItem";
+            this.editCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editCourseToolStripMenuItem.Text = "Edit Course";
+            // 
+            // manageCourseToolStripMenuItem
+            // 
+            this.manageCourseToolStripMenuItem.Name = "manageCourseToolStripMenuItem";
+            this.manageCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageCourseToolStripMenuItem.Text = "Manage Courses";
+            // 
+            // printToolStripMenuItem1
+            // 
+            this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.printToolStripMenuItem1.Text = "Print";
             // 
             // MainForm
             // 
@@ -150,5 +193,10 @@ namespace QLSV
         private System.Windows.Forms.ToolStripMenuItem cOURSEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sCOREToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem1;
     }
 }

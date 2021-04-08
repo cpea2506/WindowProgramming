@@ -65,5 +65,46 @@ namespace QLSV
                 return false;
             }
         }
+
+        public DataTable getAllCourse()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM Course", mydb.getConnection);
+
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(table);
+
+            return table;
+        }
+
+        public DataTable getCourseById(int id)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM Course WHERE id=@id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(table);
+
+            return table;
+        }
+
+        public bool updateCourse(int id, string label, int period, string des)
+        {
+            SqlCommand command = new SqlCommand("UPDATE Course SET label = @label, period = @period, description = @des WHERE id = @id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@label", SqlDbType.NVarChar).Value = label;
+            command.Parameters.Add("@period", SqlDbType.Int).Value = period;
+            command.Parameters.Add("@des", SqlDbType.Text).Value = des;
+            mydb.openConnection();
+            if(command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            } else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
     }
 }

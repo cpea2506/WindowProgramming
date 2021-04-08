@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Word;
+using Ubiety.Dns.Core;
 
 namespace QLSV
 {
@@ -114,34 +116,7 @@ namespace QLSV
 
         private void SaveToTextBtn_Click(object sender, EventArgs e)
         {
-            Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel._Workbook workbook = xcelApp.Workbooks.Add(Type.Missing);
-            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            worksheet = workbook.Sheets["Sheet1"];
-            worksheet = workbook.ActiveSheet;
-            worksheet.Name = "List of student";
-
-            for(int i = 1; i < TableOfStd.Columns.Count + 1; i++)
-            {
-                worksheet.Cells[1, i] = TableOfStd.Columns[i - 1].HeaderText;
-            }
-
-
-            for (int i = 0; i < TableOfStd.Rows.Count; i++)
-            {
-                for (int j = 0; j < TableOfStd.Columns.Count; j++)
-                    worksheet.Cells[i + 2, j + 1] = TableOfStd.Rows[i].Cells[j].Value.ToString();
-            }
-
-
-            var saveFileDialoge = new SaveFileDialog();
-            saveFileDialoge.FileName = "output";
-            saveFileDialoge.DefaultExt = "xlsx";
-            if (saveFileDialoge.ShowDialog() == DialogResult.OK)
-            {
-                workbook.SaveAs(saveFileDialoge.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-            }
-            xcelApp.Quit();
+            
         }
     }
 }

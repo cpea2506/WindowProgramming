@@ -58,5 +58,11 @@ namespace QLSV
             RemoveCourse rmc = new RemoveCourse();
             rmc.Show();
         }
+
+        private void editCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCourse edc = new EditCourse();
+            edc.Show();
+        }
     }
 }

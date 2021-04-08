@@ -118,7 +118,7 @@ namespace QLSV
             // 
             // DesTxtb
             // 
-            this.DesTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DesTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DesTxtb.Location = new System.Drawing.Point(173, 166);
             this.DesTxtb.Multiline = true;
             this.DesTxtb.Name = "DesTxtb";

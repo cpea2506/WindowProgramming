@@ -181,7 +181,7 @@ namespace QLSV
                 {
                     Word.Range headerRange = section.Headers[Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
                     headerRange.Fields.Add(headerRange, Word.WdFieldType.wdFieldPage);
-                    headerRange.Text = "Your header text";
+                    headerRange.Text = "List Of Student";
                     headerRange.Font.Size = 16;
                     headerRange.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
                 }

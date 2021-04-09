@@ -87,36 +87,118 @@ namespace QLSV
         private void ToPrinterBtn_Click(object sender, EventArgs e)
         {
             PrintDialog prdi = new PrintDialog();
-            prdi.ShowDialog();
             PrintDocument prdo = new PrintDocument();
             prdo.DocumentName = "Print Document";
             prdi.Document = prdo;
+            prdi.AllowSelection = true;
+            prdi.AllowSomePages = true;
             if(prdi.ShowDialog() == DialogResult.OK)
             {
                 prdo.Print();
             }
         }
 
-        public byte[] ImageToByteArray(Image imageIn)
+        private void SaveToTextBtn_Click(object sender, EventArgs e)
         {
-            using (var ms = new MemoryStream())
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Word Documents (*.docx)|*.docx";
+            sfd.FileName = "ListofStudent.docx";
+            if(sfd.ShowDialog() == DialogResult.OK)
             {
-                Bitmap bmp = new Bitmap(imageIn);
-                bmp.Save(ms, ImageFormat.Png);
-                return ms.ToArray();
+                ExportDataToWord(TableOfStd, sfd.FileName);
             }
         }
 
-        public Image byteArrayToImage(byte[] byteArrayIn)
+        public void ExportDataToWord(DataGridView DGV, string filename)
         {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
-        }
+            if(DGV.Rows.Count > 0)
+            {
+                int RowCount = DGV.RowCount;
+                int ColumnCount = DGV.ColumnCount;
+                Object[,] DataArray = new object[RowCount + 1, ColumnCount + 1];
 
-        private void SaveToTextBtn_Click(object sender, EventArgs e)
-        {
-            
+                // add row
+                int r = 0;
+                for (int c = 0; c < ColumnCount; c++)
+                {
+                    for (r = 0; r < RowCount; r++)
+                    {
+                        DataArray[r, c] = DGV.Rows[r].Cells[c].Value;
+                    }
+                }
+
+                Word.Document oDoc = new Word.Document();
+                oDoc.Application.Visible = true;
+                oDoc.PageSetup.Orientation = Word.WdOrientation.wdOrientLandscape;
+                dynamic oRange = oDoc.Content.Application.Selection.Range;
+                string oTemp = "";
+
+                for (r = 0; r < RowCount; r++)
+                {
+                    for (int c = 0; c < ColumnCount; c++)
+                    {
+                        oTemp += DataArray[r, c] + "\t";
+                    }
+                }
+
+                oRange.Text = oTemp;
+                object Seperator = Word.WdTableFieldSeparator.wdSeparateByTabs;
+                object ApplyBorders = true;
+                object AutoFit = true;
+                object AutoFitBehavior = Word.WdAutoFitBehavior.wdAutoFitContent;
+
+                oRange.ConvertToTable(ref Seperator, ref RowCount, ref ColumnCount,                          
+                                      Type.Missing, Type.Missing, ref ApplyBorders, 
+                                     Type.Missing, Type.Missing, Type.Missing,
+                                     Type.Missing, ref AutoFit, ref AutoFitBehavior, Type.Missing);
+
+                oRange.Select();
+                
+                oDoc.Application.Selection.Tables[1].Select();
+                oDoc.Application.Selection.Tables[1].Rows.AllowBreakAcrossPages = 0;
+                oDoc.Application.Selection.Tables[1].Rows.Alignment = 0;
+                oDoc.Application.Selection.Tables[1].Rows[1].Select();
+                oDoc.Application.Selection.InsertRowsAbove(1);
+                oDoc.Application.Selection.Tables[1].Rows[1].Select();
+
+                //header row style
+                oDoc.Application.Selection.Tables[1].Rows[1].Range.Bold = 1;
+                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Name = "Tahoma";
+                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Size = 14;
+
+                //add heeader row
+                for(int c = 0; c < ColumnCount; c++)
+                {
+                    oDoc.Application.Selection.Tables[1].Cell(1, c + 1).Range.Text = DGV.Columns[c].HeaderText;
+                }
+
+                //table style
+                oDoc.Application.Selection.Tables[1].set_Style("Grid Table 4 - Accent 5");
+                oDoc.Application.Selection.Tables[1].Rows[1].Select();
+                oDoc.Application.Selection.Cells.VerticalAlignment = Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+
+                foreach (Word.Section section in oDoc.Application.ActiveDocument.Sections)
+                {
+                    Word.Range headerRange = section.Headers[Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                    headerRange.Fields.Add(headerRange, Word.WdFieldType.wdFieldPage);
+                    headerRange.Text = "Your header text";
+                    headerRange.Font.Size = 16;
+                    headerRange.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
+                }
+
+                //save image
+                for (r = 0; r < RowCount; r++)
+                {
+                    byte[] imgByte = (byte[])DGV.Rows[r].Cells[7].Value;
+                    MemoryStream ms = new MemoryStream(imgByte);
+                    Image finalPic = (Image)(new Bitmap(Image.FromStream(ms), new Size(70, 70)));
+                    Clipboard.SetDataObject(finalPic);
+                    oDoc.Application.Selection.Tables[1].Cell(r + 2, 8).Range.Paste();
+                    oDoc.Application.Selection.Tables[1].Cell(r + 2, 8).Range.InsertParagraph();
+                }
+
+                oDoc.SaveAs(filename);
+            }
         }
     }
 }

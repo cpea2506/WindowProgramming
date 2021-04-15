@@ -64,5 +64,11 @@ namespace QLSV
             EditCourse edc = new EditCourse();
             edc.Show();
         }
+
+        private void manageCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageCoursesForm mcf = new ManageCoursesForm();
+            mcf.Show();
+        }
     }
 }

@@ -153,6 +153,7 @@ namespace QLSV
             this.manageCourseToolStripMenuItem.Name = "manageCourseToolStripMenuItem";
             this.manageCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageCourseToolStripMenuItem.Text = "Manage Courses";
+            this.manageCourseToolStripMenuItem.Click += new System.EventHandler(this.manageCourseToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem1
             // 

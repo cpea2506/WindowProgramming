@@ -94,97 +94,122 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\EditCourse.cs">
+    <Compile Include="Form\Course\AddScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\EditCourse.Designer.cs">
+    <Compile Include="Form\Course\AddScoreForm.Designer.cs">
+      <DependentUpon>AddScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Course\AvgScoreByCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Course\AvgScoreByCourseForm.Designer.cs">
+      <DependentUpon>AvgScoreByCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Course\EditCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Course\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\AddNewCourse.cs">
+    <Compile Include="Form\Course\AddNewCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\AddNewCourse.Designer.cs">
+    <Compile Include="Form\Course\AddNewCourse.Designer.cs">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\COURSE.cs" />
-    <Compile Include="Form\AddStudentForm.cs">
+    <Compile Include="Form\Student\AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\AddStudentForm.Designer.cs">
+    <Compile Include="Form\Student\AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\MainForm.cs">
+    <Compile Include="Form\Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\MainForm.Designer.cs">
+    <Compile Include="Form\Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\MY_DB.cs" />
-    <Compile Include="Form\LoginForm.cs">
+    <Compile Include="Form\Main\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\LoginForm.Designer.cs">
+    <Compile Include="Form\Main\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Program.cs" />
-    <Compile Include="Form\Print.cs">
+    <Compile Include="Form\Student\Print.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Print.Designer.cs">
+    <Compile Include="Form\Student\Print.Designer.cs">
       <DependentUpon>Print.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form\Register.cs">
+    <Compile Include="Form\Course\ManageCoursesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Register.Designer.cs">
+    <Compile Include="Form\Course\ManageCoursesForm.Designer.cs">
+      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\Main\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Main\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\STUDENT.cs" />
-    <Compile Include="Form\StudentListForm.cs">
+    <Compile Include="Form\Student\StudentListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\StudentListForm.Designer.cs">
+    <Compile Include="Form\Student\StudentListForm.Designer.cs">
       <DependentUpon>StudentListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\UpdateDeleteStudentForm.cs">
+    <Compile Include="Form\Student\UpdateDeleteStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\UpdateDeleteStudentForm.Designer.cs">
+    <Compile Include="Form\Student\UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\StaticsForm.cs">
+    <Compile Include="Form\Student\StaticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\StaticsForm.Designer.cs">
+    <Compile Include="Form\Student\StaticsForm.Designer.cs">
       <DependentUpon>StaticsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\RemoveCourse.cs">
+    <Compile Include="Form\Course\RemoveCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\RemoveCourse.Designer.cs">
+    <Compile Include="Form\Course\RemoveCourse.Designer.cs">
       <DependentUpon>RemoveCourse.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\EditCourse.resx">
+    <Compile Include="SCORE.cs" />
+    <EmbeddedResource Include="Form\Course\AddScoreForm.resx">
+      <DependentUpon>AddScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Course\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\AddNewCourse.resx">
+    <EmbeddedResource Include="Form\Course\AddNewCourse.resx">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\AddStudentForm.resx">
-      <DependentUpon>AddStudentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\MainForm.resx">
+    <EmbeddedResource Include="Form\Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\StaticsForm.resx">
+    <EmbeddedResource Include="Form\Student\AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Main\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Student\StaticsForm.resx">
       <DependentUpon>StaticsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Print.resx">
+    <EmbeddedResource Include="Form\Student\Print.resx">
       <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Course\ManageCoursesForm.resx">
+      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,16 +221,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Form\Register.resx">
+    <EmbeddedResource Include="Form\Main\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\StudentListForm.resx">
+    <EmbeddedResource Include="Form\Student\StudentListForm.resx">
       <DependentUpon>StudentListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\UpdateDeleteStudentForm.resx">
+    <EmbeddedResource Include="Form\Student\UpdateDeleteStudentForm.resx">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\RemoveCourse.resx">
+    <EmbeddedResource Include="Form\Course\RemoveCourse.resx">
       <DependentUpon>RemoveCourse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

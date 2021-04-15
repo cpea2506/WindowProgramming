@@ -106,5 +106,14 @@ namespace QLSV
                 return false;
             }
         }
+
+        public string totalCourse()
+        {
+            DataTable table = new DataTable();
+            SqlDataAdapter adpt = new SqlDataAdapter("SELECT COUNT(label) FROM Course", mydb.getConnection);
+            adpt.Fill(table);
+
+            return table.Rows[0][0].ToString();
+        }
     }
 }

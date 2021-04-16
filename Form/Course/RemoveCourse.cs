@@ -33,7 +33,7 @@ namespace QLSV
                     }
                     else
                     {
-                        MessageBox.Show("Student Not Deleted", "Delete Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Course Not Deleted", "Delete Course", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

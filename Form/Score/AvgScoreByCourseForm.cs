@@ -16,5 +16,13 @@ namespace QLSV
         {
             InitializeComponent();
         }
+
+        private void AvgScoreByCourseForm_Load(object sender, EventArgs e)
+        {
+            SCORE score = new SCORE();
+            AverageScoreGridView.ReadOnly = true;
+            AverageScoreGridView.DataSource = score.getAvgScoreByCourse();
+            AverageScoreGridView.AllowUserToAddRows = false;
+        }
     }
 }

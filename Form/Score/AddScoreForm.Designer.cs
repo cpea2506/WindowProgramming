@@ -29,17 +29,18 @@ namespace QLSV
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.AddScoreBtn = new System.Windows.Forms.Button();
             this.StudentIdTextBox = new System.Windows.Forms.TextBox();
-            this.ScoreGridView = new System.Windows.Forms.DataGridView();
+            this.StudentGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ScoreTextBox = new System.Windows.Forms.TextBox();
             this.SelectCourseComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.DesTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ScoreGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,6 +63,7 @@ namespace QLSV
             this.AddScoreBtn.TabIndex = 1;
             this.AddScoreBtn.Text = "Add";
             this.AddScoreBtn.UseVisualStyleBackColor = false;
+            this.AddScoreBtn.Click += new System.EventHandler(this.AddScoreBtn_Click);
             // 
             // StudentIdTextBox
             // 
@@ -71,14 +73,23 @@ namespace QLSV
             this.StudentIdTextBox.Size = new System.Drawing.Size(232, 26);
             this.StudentIdTextBox.TabIndex = 2;
             // 
-            // ScoreGridView
+            // StudentGridView
             // 
-            this.ScoreGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ScoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ScoreGridView.Location = new System.Drawing.Point(411, 12);
-            this.ScoreGridView.Name = "ScoreGridView";
-            this.ScoreGridView.Size = new System.Drawing.Size(377, 405);
-            this.ScoreGridView.TabIndex = 3;
+            this.StudentGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.StudentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.StudentGridView.Location = new System.Drawing.Point(411, 12);
+            this.StudentGridView.Name = "StudentGridView";
+            this.StudentGridView.Size = new System.Drawing.Size(377, 405);
+            this.StudentGridView.TabIndex = 3;
+            this.StudentGridView.Click += new System.EventHandler(this.StudentGridView_Click);
             // 
             // label2
             // 
@@ -148,14 +159,14 @@ namespace QLSV
             this.Controls.Add(this.ScoreTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ScoreGridView);
+            this.Controls.Add(this.StudentGridView);
             this.Controls.Add(this.StudentIdTextBox);
             this.Controls.Add(this.AddScoreBtn);
             this.Controls.Add(this.label1);
             this.Name = "AddScoreForm";
             this.Text = "AddScoreForm";
             this.Load += new System.EventHandler(this.AddScoreForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ScoreGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +177,7 @@ namespace QLSV
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddScoreBtn;
         private System.Windows.Forms.TextBox StudentIdTextBox;
-        private System.Windows.Forms.DataGridView ScoreGridView;
+        private System.Windows.Forms.DataGridView StudentGridView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ScoreTextBox;

@@ -94,16 +94,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\Course\AddScoreForm.cs">
+    <Compile Include="Form\Score\AddScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Course\AddScoreForm.Designer.cs">
+    <Compile Include="Form\Score\AddScoreForm.Designer.cs">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Course\AvgScoreByCourseForm.cs">
+    <Compile Include="Form\Score\AvgScoreByCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Course\AvgScoreByCourseForm.Designer.cs">
+    <Compile Include="Form\Score\AvgScoreByCourseForm.Designer.cs">
       <DependentUpon>AvgScoreByCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Course\EditCourse.cs">
@@ -151,6 +151,12 @@
     <Compile Include="Form\Course\ManageCoursesForm.Designer.cs">
       <DependentUpon>ManageCoursesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Score\ManageScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Score\ManageScoreForm.Designer.cs">
+      <DependentUpon>ManageScoreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form\Main\Register.cs">
       <SubType>Form</SubType>
@@ -183,9 +189,18 @@
     <Compile Include="Form\Course\RemoveCourse.Designer.cs">
       <DependentUpon>RemoveCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="SCORE.cs" />
-    <EmbeddedResource Include="Form\Course\AddScoreForm.resx">
+    <Compile Include="Data\SCORE.cs" />
+    <Compile Include="RemoveScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveScoreForm.Designer.cs">
+      <DependentUpon>RemoveScoreForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Score\AddScoreForm.resx">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Score\AvgScoreByCourseForm.resx">
+      <DependentUpon>AvgScoreByCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Course\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
@@ -211,6 +226,9 @@
     <EmbeddedResource Include="Form\Course\ManageCoursesForm.resx">
       <DependentUpon>ManageCoursesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Score\ManageScoreForm.resx">
+      <DependentUpon>ManageScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -232,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Course\RemoveCourse.resx">
       <DependentUpon>RemoveCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveScoreForm.resx">
+      <DependentUpon>RemoveScoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

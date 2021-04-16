@@ -70,5 +70,29 @@ namespace QLSV
             ManageCoursesForm mcf = new ManageCoursesForm();
             mcf.Show();
         }
+
+        private void addScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddScoreForm asf = new AddScoreForm();
+            asf.Show();
+        }
+
+        private void avgScoreByCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AvgScoreByCourseForm asbf = new AvgScoreByCourseForm();
+            asbf.Show();
+        }
+
+        private void manageScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageScoreForm msf = new ManageScoreForm();
+            msf.Show();
+        }
+
+        private void removeScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveScoreForm rsf = new RemoveScoreForm();
+            rsf.Show();
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace QLSV
 
         public bool deleteStudent(int id)
         {
-            SqlCommand command =new  SqlCommand("DELETE * FROM std WHERE id = @id", mydb.getConnection);
+            SqlCommand command =new  SqlCommand("DELETE FROM std WHERE id = @id", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             mydb.openConnection();
             if(command.ExecuteNonQuery() == 1)

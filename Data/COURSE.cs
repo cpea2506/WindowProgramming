@@ -77,6 +77,17 @@ namespace QLSV
             return table;
         }
 
+        public DataTable getSpecificCourse(int cid)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM Course WHERE id = @cid", mydb.getConnection);
+            command.Parameters.Add("@cid", SqlDbType.Int).Value = cid;
+            SqlDataAdapter adpt = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adpt.Fill(table);
+
+            return table;
+        }
+
         public DataTable getCourseById(int id)
         {
             SqlCommand command = new SqlCommand("SELECT * FROM Course WHERE id=@id", mydb.getConnection);

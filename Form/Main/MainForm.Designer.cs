@@ -112,6 +112,7 @@ namespace QLSV
             this.managaStudentFormToolStripMenuItem.Name = "managaStudentFormToolStripMenuItem";
             this.managaStudentFormToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.managaStudentFormToolStripMenuItem.Text = "Manage Student Form";
+            this.managaStudentFormToolStripMenuItem.Click += new System.EventHandler(this.managaStudentFormToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
@@ -165,6 +166,7 @@ namespace QLSV
             this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
             this.printToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
             this.printToolStripMenuItem1.Text = "Print";
+            this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
             // 
             // sCOREToolStripMenuItem
             // 

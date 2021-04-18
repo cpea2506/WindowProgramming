@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -46,7 +47,6 @@ namespace QLSV
 
         private void CourseListBox_Click(object sender, EventArgs e)
         {
-            DataRowView drv = (DataRowView)CourseListBox.SelectedItem;
             pos = CourseListBox.SelectedIndex;
             showData(pos);
         }
@@ -161,6 +161,19 @@ namespace QLSV
         {
             pos = course.getAllCourse().Rows.Count - 1;
             showData(pos);
+        }
+   
+
+        private void CourseListBox_DoubleClick(object sender, EventArgs e)
+        {
+            CourseStdList csl = new CourseStdList();
+            int pos = CourseListBox.SelectedIndex;
+            DataRow dr = course.getAllCourse().Rows[pos];
+            csl.CourseLabelTextBox.Text = dr.ItemArray[1].ToString();
+
+            int cid = Convert.ToInt32(dr.ItemArray[0].ToString());
+            csl.SelectedCourseGridView.DataSource = course.getSpecificCourse(cid);
+            csl.Show();
         }
     }
 

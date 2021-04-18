@@ -22,35 +22,42 @@ namespace QLSV
         STUDENT student = new STUDENT();
         private void FindBtn_Click(object sender, EventArgs e)
         {
-            int id = Int32.Parse(IDTextBox.Text);
-            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE id = " + id);
-            DataTable table = student.getStudents(command);
-            if (table.Rows.Count > 0)
+            try
             {
-                FnameTextBox.Text = table.Rows[0]["fname"].ToString();
-                LNameTextBox.Text = table.Rows[0]["lname"].ToString();
-                BdateBox.Value = (DateTime)table.Rows[0]["bdate"];
-
-                //gender
-                if (table.Rows[0]["gender"].ToString() == "Female")
+                int id = Int32.Parse(IDTextBox.Text);
+                SqlCommand command = new SqlCommand("SELECT * FROM std WHERE id = " + id);
+                DataTable table = student.getStudents(command);
+                if (table.Rows.Count > 0)
                 {
-                    FemaleRadio.Checked = true;
+                    FnameTextBox.Text = table.Rows[0]["fname"].ToString();
+                    LNameTextBox.Text = table.Rows[0]["lname"].ToString();
+                    BdateBox.Value = (DateTime)table.Rows[0]["bdate"];
+
+                    //gender
+                    if (table.Rows[0]["gender"].ToString() == "Female")
+                    {
+                        FemaleRadio.Checked = true;
+                    }
+                    else
+                    {
+                        MaleRadio.Checked = true;
+                    }
+
+                    PhoneTextBox.Text = table.Rows[0]["phone"].ToString();
+                    AddressTextBox.Text = table.Rows[0]["address"].ToString();
+
+                    byte[] pic = (byte[])table.Rows[0]["picture"];
+                    MemoryStream picture = new MemoryStream(pic);
+                    PictureBox.Image = Image.FromStream(picture);
                 }
                 else
                 {
-                    MaleRadio.Checked = true;
+                    MessageBox.Show("Not Found", "Find Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-
-                PhoneTextBox.Text = table.Rows[0]["phone"].ToString();
-                AddressTextBox.Text = table.Rows[0]["address"].ToString();
-
-                byte[] pic = (byte[])table.Rows[0]["picture"];
-                MemoryStream picture = new MemoryStream(pic);
-                PictureBox.Image = Image.FromStream(picture);
-            } else
+            } catch(Exception ex)
             {
-                MessageBox.Show("Not Found", "Find Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+                MessageBox.Show(ex.Message, "Find Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }         
         }
 
         private void TextBoxId_KeyPress(object sender, KeyPressEventArgs e)
@@ -155,6 +162,12 @@ namespace QLSV
             {
                 MessageBox.Show("Empty Field", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void AddCourseBtn_Click(object sender, EventArgs e)
+        {
+            AddStudentCourseForm ascf = new AddStudentCourseForm();
+            ascf.Show();
         }
     }
 }

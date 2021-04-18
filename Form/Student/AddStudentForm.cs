@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLSV
@@ -35,7 +29,7 @@ namespace QLSV
         {
             OpenFileDialog opf = new OpenFileDialog();
             opf.Filter = "Select Image(*.jpg;*.png;*.gif;*.jpeg)|*.jpg;*.png;*.gif;*.jpeg";
-            if(opf.ShowDialog() == DialogResult.OK)
+            if (opf.ShowDialog() == DialogResult.OK)
             {
                 PictureBoxStudentImage.Image = Image.FromFile(opf.FileName);
             }

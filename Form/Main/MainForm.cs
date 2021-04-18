@@ -94,5 +94,17 @@ namespace QLSV
             RemoveScoreForm rsf = new RemoveScoreForm();
             rsf.Show();
         }
+
+        private void printToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrintForm pcf = new PrintForm();
+            pcf.Show();
+        }
+
+        private void managaStudentFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageStudentForm msf = new ManageStudentForm();
+            msf.Show();
+        }
     }
 }

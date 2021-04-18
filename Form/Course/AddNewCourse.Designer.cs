@@ -38,6 +38,8 @@ namespace QLSV
             this.LabelTxtb = new System.Windows.Forms.TextBox();
             this.PeriodTxtb = new System.Windows.Forms.TextBox();
             this.DesTxtb = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SemesterComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +76,7 @@ namespace QLSV
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 184);
+            this.label4.Location = new System.Drawing.Point(21, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 24);
             this.label4.TabIndex = 3;
@@ -84,7 +86,7 @@ namespace QLSV
             // 
             this.AddBtnCourse.BackColor = System.Drawing.Color.Turquoise;
             this.AddBtnCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtnCourse.Location = new System.Drawing.Point(25, 281);
+            this.AddBtnCourse.Location = new System.Drawing.Point(40, 281);
             this.AddBtnCourse.Name = "AddBtnCourse";
             this.AddBtnCourse.Size = new System.Drawing.Size(398, 44);
             this.AddBtnCourse.TabIndex = 4;
@@ -95,42 +97,63 @@ namespace QLSV
             // CourseIdTxtb
             // 
             this.CourseIdTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseIdTxtb.Location = new System.Drawing.Point(173, 23);
+            this.CourseIdTxtb.Location = new System.Drawing.Point(154, 23);
             this.CourseIdTxtb.Name = "CourseIdTxtb";
-            this.CourseIdTxtb.Size = new System.Drawing.Size(250, 24);
+            this.CourseIdTxtb.Size = new System.Drawing.Size(94, 24);
             this.CourseIdTxtb.TabIndex = 5;
             // 
             // LabelTxtb
             // 
             this.LabelTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTxtb.Location = new System.Drawing.Point(173, 72);
+            this.LabelTxtb.Location = new System.Drawing.Point(154, 73);
             this.LabelTxtb.Name = "LabelTxtb";
-            this.LabelTxtb.Size = new System.Drawing.Size(250, 24);
+            this.LabelTxtb.Size = new System.Drawing.Size(284, 24);
             this.LabelTxtb.TabIndex = 6;
             // 
             // PeriodTxtb
             // 
             this.PeriodTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PeriodTxtb.Location = new System.Drawing.Point(173, 123);
+            this.PeriodTxtb.Location = new System.Drawing.Point(154, 124);
             this.PeriodTxtb.Name = "PeriodTxtb";
-            this.PeriodTxtb.Size = new System.Drawing.Size(250, 24);
+            this.PeriodTxtb.Size = new System.Drawing.Size(284, 24);
             this.PeriodTxtb.TabIndex = 7;
             // 
             // DesTxtb
             // 
             this.DesTxtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DesTxtb.Location = new System.Drawing.Point(173, 166);
+            this.DesTxtb.Location = new System.Drawing.Point(154, 166);
             this.DesTxtb.Multiline = true;
             this.DesTxtb.Name = "DesTxtb";
-            this.DesTxtb.Size = new System.Drawing.Size(250, 94);
+            this.DesTxtb.Size = new System.Drawing.Size(284, 94);
             this.DesTxtb.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(254, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Semester";
+            // 
+            // SemesterComboBox
+            // 
+            this.SemesterComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SemesterComboBox.FormattingEnabled = true;
+            this.SemesterComboBox.Location = new System.Drawing.Point(358, 21);
+            this.SemesterComboBox.Name = "SemesterComboBox";
+            this.SemesterComboBox.Size = new System.Drawing.Size(80, 26);
+            this.SemesterComboBox.TabIndex = 10;
             // 
             // AddNewCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
-            this.ClientSize = new System.Drawing.Size(439, 337);
+            this.ClientSize = new System.Drawing.Size(477, 337);
+            this.Controls.Add(this.SemesterComboBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.DesTxtb);
             this.Controls.Add(this.PeriodTxtb);
             this.Controls.Add(this.LabelTxtb);
@@ -158,5 +181,7 @@ namespace QLSV
         public System.Windows.Forms.TextBox LabelTxtb;
         public System.Windows.Forms.TextBox PeriodTxtb;
         public System.Windows.Forms.TextBox DesTxtb;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox SemesterComboBox;
     }
 }

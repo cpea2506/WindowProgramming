@@ -180,6 +180,7 @@ namespace QLSV
             this.CourseListBox.Size = new System.Drawing.Size(257, 316);
             this.CourseListBox.TabIndex = 12;
             this.CourseListBox.Click += new System.EventHandler(this.CourseListBox_Click);
+            this.CourseListBox.DoubleClick += new System.EventHandler(this.CourseListBox_DoubleClick);
             // 
             // FirstBtn
             // 

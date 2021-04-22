@@ -26,6 +26,7 @@ namespace QLSV
             ScoreGridView.DataSource = course.getAllCourse();
             ScoreGridView.AllowUserToAddRows = false;
             ScoreGridView.ReadOnly = true;
+            ScoreGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void PrintBtn_Click(object sender, EventArgs e)

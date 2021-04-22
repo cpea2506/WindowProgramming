@@ -63,7 +63,7 @@ namespace QLSV
             this.ShowStdBtn.BackColor = System.Drawing.Color.LightGray;
             this.ShowStdBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowStdBtn.ForeColor = System.Drawing.Color.Black;
-            this.ShowStdBtn.Location = new System.Drawing.Point(398, 12);
+            this.ShowStdBtn.Location = new System.Drawing.Point(422, 12);
             this.ShowStdBtn.Name = "ShowStdBtn";
             this.ShowStdBtn.Size = new System.Drawing.Size(172, 26);
             this.ShowStdBtn.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace QLSV
             this.ShowScoreBtn.BackColor = System.Drawing.Color.LightGray;
             this.ShowScoreBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowScoreBtn.ForeColor = System.Drawing.Color.Black;
-            this.ShowScoreBtn.Location = new System.Drawing.Point(593, 12);
+            this.ShowScoreBtn.Location = new System.Drawing.Point(695, 12);
             this.ShowScoreBtn.Name = "ShowScoreBtn";
             this.ShowScoreBtn.Size = new System.Drawing.Size(172, 26);
             this.ShowScoreBtn.TabIndex = 2;
@@ -189,7 +189,7 @@ namespace QLSV
             this.GridViewByOption.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridViewByOption.Location = new System.Drawing.Point(398, 44);
             this.GridViewByOption.Name = "GridViewByOption";
-            this.GridViewByOption.Size = new System.Drawing.Size(367, 378);
+            this.GridViewByOption.Size = new System.Drawing.Size(488, 378);
             this.GridViewByOption.TabIndex = 13;
             this.GridViewByOption.Click += new System.EventHandler(this.GridViewByOption_Click);
             // 
@@ -198,7 +198,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(779, 450);
+            this.ClientSize = new System.Drawing.Size(898, 450);
             this.Controls.Add(this.GridViewByOption);
             this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.ScoreTextBox);

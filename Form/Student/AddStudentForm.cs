@@ -41,7 +41,7 @@ namespace QLSV
             int id = Convert.ToInt32(StudentID.Text);
             string fname = Fname.Text;
             string lname = Lname.Text;
-            DateTime bdate = Bdate.Value;
+            DateTime bdate = Bdate.Value.Date;
             string phone = Phone.Text;
             string address = Address.Text;
             string gender = "Female";

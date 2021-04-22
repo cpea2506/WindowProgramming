@@ -49,6 +49,9 @@ namespace QLSV
             this.manageScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avgScoreByCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.avgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staticsResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +61,8 @@ namespace QLSV
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sTUDENTToolStripMenuItem,
             this.cOURSEToolStripMenuItem,
-            this.sCOREToolStripMenuItem});
+            this.sCOREToolStripMenuItem,
+            this.rESULTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
@@ -214,6 +218,29 @@ namespace QLSV
             this.printResultToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.printResultToolStripMenuItem.Text = "Print Result";
             // 
+            // rESULTToolStripMenuItem
+            // 
+            this.rESULTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.avgToolStripMenuItem,
+            this.staticsResultToolStripMenuItem});
+            this.rESULTToolStripMenuItem.Name = "rESULTToolStripMenuItem";
+            this.rESULTToolStripMenuItem.Size = new System.Drawing.Size(57, 22);
+            this.rESULTToolStripMenuItem.Text = "RESULT";
+            // 
+            // avgToolStripMenuItem
+            // 
+            this.avgToolStripMenuItem.Name = "avgToolStripMenuItem";
+            this.avgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.avgToolStripMenuItem.Text = "Avg Result By Score";
+            this.avgToolStripMenuItem.Click += new System.EventHandler(this.avgToolStripMenuItem_Click);
+            // 
+            // staticsResultToolStripMenuItem
+            // 
+            this.staticsResultToolStripMenuItem.Name = "staticsResultToolStripMenuItem";
+            this.staticsResultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.staticsResultToolStripMenuItem.Text = "Statics Result";
+            this.staticsResultToolStripMenuItem.Click += new System.EventHandler(this.staticsResultToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,5 +279,8 @@ namespace QLSV
         private System.Windows.Forms.ToolStripMenuItem manageScoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avgScoreByCourseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printResultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rESULTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem avgToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staticsResultToolStripMenuItem;
     }
 }

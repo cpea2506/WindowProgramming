@@ -28,7 +28,7 @@ namespace QLSV
 
         public DataTable getAllScore()
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM Score", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT score.student_id, std.fname, std.lname, score.course_id, Course.label, score.student_score FROM std, Course, score WHERE score.student_id = std.id AND Course.id = score.course_id ORDER BY student_id", mydb.getConnection);
             DataTable table = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(table);

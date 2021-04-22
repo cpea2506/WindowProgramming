@@ -30,6 +30,7 @@ namespace QLSV
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ScoreGridView = new System.Windows.Forms.DataGridView();
             this.RemoveBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ScoreGridView)).BeginInit();
@@ -47,9 +48,17 @@ namespace QLSV
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ScoreGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ScoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ScoreGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.ScoreGridView.Location = new System.Drawing.Point(12, 12);
             this.ScoreGridView.Name = "ScoreGridView";
-            this.ScoreGridView.Size = new System.Drawing.Size(447, 344);
+            this.ScoreGridView.Size = new System.Drawing.Size(700, 344);
             this.ScoreGridView.TabIndex = 0;
             // 
             // RemoveBtn
@@ -57,7 +66,7 @@ namespace QLSV
             this.RemoveBtn.BackColor = System.Drawing.Color.Crimson;
             this.RemoveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RemoveBtn.Location = new System.Drawing.Point(108, 375);
+            this.RemoveBtn.Location = new System.Drawing.Point(252, 375);
             this.RemoveBtn.Name = "RemoveBtn";
             this.RemoveBtn.Size = new System.Drawing.Size(242, 49);
             this.RemoveBtn.TabIndex = 1;
@@ -70,7 +79,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(471, 436);
+            this.ClientSize = new System.Drawing.Size(724, 436);
             this.Controls.Add(this.RemoveBtn);
             this.Controls.Add(this.ScoreGridView);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -23,6 +23,7 @@ namespace QLSV
             AverageScoreGridView.ReadOnly = true;
             AverageScoreGridView.DataSource = score.getAvgScoreByCourse();
             AverageScoreGridView.AllowUserToAddRows = false;
+            AverageScoreGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

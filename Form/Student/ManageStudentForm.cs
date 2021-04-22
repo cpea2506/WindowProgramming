@@ -28,6 +28,7 @@ namespace QLSV
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             StudentGridView.RowTemplate.Height = 80;
             StudentGridView.DataSource = student.getStudents(command);
+            StudentGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             picCol = (DataGridViewImageColumn)StudentGridView.Columns[7];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             StudentGridView.AllowUserToAddRows = false;

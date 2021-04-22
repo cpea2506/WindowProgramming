@@ -22,12 +22,14 @@ namespace QLSV
         STUDENT student = new STUDENT();
         SCORE score = new SCORE();
         MY_DB mydb = new MY_DB();
+
+
         private void AddScoreForm_Load(object sender, EventArgs e)
         {
             SelectCourseComboBox.DataSource = course.getAllCourse();
             SelectCourseComboBox.DisplayMember = "label";
             SelectCourseComboBox.ValueMember = "id";
-
+            StudentGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             SqlCommand command = new SqlCommand("SELECT id, fname, lname FROM std", mydb.getConnection);
             StudentGridView.DataSource = student.getStudents(command);
         }

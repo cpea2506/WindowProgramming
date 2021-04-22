@@ -91,8 +91,9 @@ namespace QLSV
 
         private void ShowStdBtn_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT id, fname, lname FROM std", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT id, fname, lname, bdate FROM std", mydb.getConnection);
             GridViewByOption.DataSource = student.getStudents(command);
+            GridViewByOption.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void ManageScoreForm_Load(object sender, EventArgs e)
@@ -100,17 +101,19 @@ namespace QLSV
             CourseComboBox.DataSource = course.getAllCourse();
             CourseComboBox.DisplayMember = "label";
             CourseComboBox.ValueMember = "id";
-
-            SqlCommand command = new SqlCommand("SELECT id, fname, lname FROM std", mydb.getConnection);
+           
+            SqlCommand command = new SqlCommand("SELECT id, fname, lname, bdate FROM std", mydb.getConnection);
             GridViewByOption.DataSource = student.getStudents(command);
             GridViewByOption.AllowUserToAddRows = false;
             GridViewByOption.ReadOnly = true;
+            GridViewByOption.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void ShowScoreBtn_Click(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand("SELECT * FROM score", mydb.getConnection);
             GridViewByOption.DataSource = score.getAllScore();
+            GridViewByOption.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void GridViewByOption_Click(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace QLSV
             try
             {
                 int studentId = Convert.ToInt32(ScoreGridView.CurrentRow.Cells[0].Value.ToString());
-                int courseId = Convert.ToInt32(ScoreGridView.CurrentRow.Cells[1].Value.ToString());
+                int courseId = Convert.ToInt32(ScoreGridView.CurrentRow.Cells[3].Value.ToString());
 
 
                 if (MessageBox.Show("Are You Sure You Want To Delete This Score?", "Delete Score", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -31,7 +31,7 @@ namespace QLSV
                     if (score.deleteScore(studentId, courseId))
                     {
                         MessageBox.Show("Score Deleted", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ScoreGridView.DataSource = score.getAllScore();
+                        reloadGrid();
                     }
                     else
                     {
@@ -45,9 +45,15 @@ namespace QLSV
             }
         }
 
-        private void RemoveScoreForm_Load(object sender, EventArgs e)
+        public void reloadGrid()
         {
             ScoreGridView.DataSource = score.getAllScore();
+            ScoreGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void RemoveScoreForm_Load(object sender, EventArgs e)
+        {
+            reloadGrid();
         }
     }
 }

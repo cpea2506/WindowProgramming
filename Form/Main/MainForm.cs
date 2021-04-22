@@ -106,5 +106,17 @@ namespace QLSV
             ManageStudentForm msf = new ManageStudentForm();
             msf.Show();
         }
+
+        private void avgToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Result_Form rf = new Result_Form();
+            rf.Show();
+        }
+
+        private void staticsResultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StaticResult sr = new StaticResult();
+            sr.Show();
+        }
     }
 }

@@ -220,6 +220,18 @@
     <Compile Include="Form\Score\RemoveScoreForm.Designer.cs">
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Result Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result Form.Designer.cs">
+      <DependentUpon>Result Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaticResult.Designer.cs">
+      <DependentUpon>StaticResult.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\Course\CourseStdList.resx">
       <DependentUpon>CourseStdList.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +301,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Score\RemoveScoreForm.resx">
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result Form.resx">
+      <DependentUpon>Result Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaticResult.resx">
+      <DependentUpon>StaticResult.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -28,7 +28,7 @@ namespace QLSV
             SqlCommand command = new SqlCommand("SELECT gender, COUNT(id) AS amount FROM std GROUP BY gender", db.getConnection);
             genderChart.DataSource = std.getStudents(command);
 
-            // Add value to male chart
+            // Add value to gender chart
             genderChart.Series["Gender"].XValueMember = "gender";
             genderChart.Series["Gender"].YValueMembers = "amount";
 

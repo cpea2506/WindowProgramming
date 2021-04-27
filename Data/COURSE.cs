@@ -26,13 +26,14 @@ namespace QLSV
            
         }
 
-        public bool insertCourse(int id, string label, int period, string des)
+        public bool insertCourse(int id, string label, int period, string des, int semester)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO Course (id, label, period, description) VALUES(@id, @label, @period, @des)", mydb.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO Course (id, label, period, description, semester) VALUES(@id, @label, @period, @des, @semes)", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@label", SqlDbType.NVarChar).Value = label;
             command.Parameters.Add("@period", SqlDbType.Int).Value = period;
             command.Parameters.Add("@des", SqlDbType.Text).Value = des;
+            command.Parameters.Add("@semes", SqlDbType.Int).Value = semester;
 
             mydb.openConnection();
 
@@ -66,10 +67,19 @@ namespace QLSV
             }
         }
 
+        
         public DataTable getAllCourse()
         {
             SqlCommand command = new SqlCommand("SELECT * FROM Course", mydb.getConnection);
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(table);
 
+            return table;
+        }
+
+        public DataTable getCourse(SqlCommand command)
+        {
             DataTable table = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(table);

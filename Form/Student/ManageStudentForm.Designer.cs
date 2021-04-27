@@ -180,6 +180,7 @@ namespace QLSV
             // Bdate
             // 
             this.Bdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Bdate.Location = new System.Drawing.Point(132, 137);
             this.Bdate.Name = "Bdate";
             this.Bdate.Size = new System.Drawing.Size(226, 22);
@@ -252,7 +253,7 @@ namespace QLSV
             this.StudentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentGridView.Location = new System.Drawing.Point(383, 60);
             this.StudentGridView.Name = "StudentGridView";
-            this.StudentGridView.Size = new System.Drawing.Size(761, 392);
+            this.StudentGridView.Size = new System.Drawing.Size(772, 392);
             this.StudentGridView.TabIndex = 20;
             this.StudentGridView.Click += new System.EventHandler(this.StudentGridView_Click);
             // 
@@ -353,7 +354,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1156, 548);
+            this.ClientSize = new System.Drawing.Size(1167, 548);
             this.Controls.Add(this.DownloadBtn);
             this.Controls.Add(this.TotalLabel);
             this.Controls.Add(this.ResetBtn);

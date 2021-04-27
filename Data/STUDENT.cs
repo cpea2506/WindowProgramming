@@ -61,7 +61,7 @@ namespace QLSV
 
         public bool updateStudent(int id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
         {
-            SqlCommand command = new SqlCommand("UPDATE std SET fname = @fn,lname=@ln, bdate = @bdt, gender = @gdr,phone=@phn,address=@adrs, picture=@pic where id = @id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE std SET fname = @fn,lname=@ln, bdate = @bdt, gender = @gdr,phone=@phn,address=@adrs, picture=@pic WHERE id = @id", mydb.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fn", SqlDbType.VarChar).Value = fname;
             command.Parameters.Add("@ln", SqlDbType.VarChar).Value = lname;

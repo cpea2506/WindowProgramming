@@ -31,7 +31,7 @@ namespace QLSV
         {
             this.label1 = new System.Windows.Forms.Label();
             this.CourseLabelTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.SemesterLabel = new System.Windows.Forms.Label();
             this.SelectedCourseGridView = new System.Windows.Forms.DataGridView();
             this.PrintBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SelectedCourseGridView)).BeginInit();
@@ -55,15 +55,15 @@ namespace QLSV
             this.CourseLabelTextBox.Size = new System.Drawing.Size(122, 24);
             this.CourseLabelTextBox.TabIndex = 6;
             // 
-            // label5
+            // SemesterLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(319, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 24);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Semester";
+            this.SemesterLabel.AutoSize = true;
+            this.SemesterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SemesterLabel.Location = new System.Drawing.Point(319, 28);
+            this.SemesterLabel.Name = "SemesterLabel";
+            this.SemesterLabel.Size = new System.Drawing.Size(110, 24);
+            this.SemesterLabel.TabIndex = 10;
+            this.SemesterLabel.Text = "Semester: ";
             // 
             // SelectedCourseGridView
             // 
@@ -95,7 +95,7 @@ namespace QLSV
             this.ClientSize = new System.Drawing.Size(472, 339);
             this.Controls.Add(this.PrintBtn);
             this.Controls.Add(this.SelectedCourseGridView);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SemesterLabel);
             this.Controls.Add(this.CourseLabelTextBox);
             this.Controls.Add(this.label1);
             this.Name = "CourseStdList";
@@ -110,8 +110,8 @@ namespace QLSV
 
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox CourseLabelTextBox;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button PrintBtn;
         public System.Windows.Forms.DataGridView SelectedCourseGridView;
+        public System.Windows.Forms.Label SemesterLabel;
     }
 }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Word = Microsoft.Office.Interop.Word;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QLSV
 {
@@ -21,9 +22,11 @@ namespace QLSV
         }
 
         COURSE course = new COURSE();
+        MY_DB mydb = new MY_DB();
         private void PrintForm_Load(object sender, EventArgs e)
         {
-            ScoreGridView.DataSource = course.getAllCourse();
+            SqlCommand command = new SqlCommand("SELECT * FROM Course", mydb.getConnection);
+            ScoreGridView.DataSource = course.getCourse(command);
             ScoreGridView.AllowUserToAddRows = false;
             ScoreGridView.ReadOnly = true;
             ScoreGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

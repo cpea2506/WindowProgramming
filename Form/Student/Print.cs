@@ -35,6 +35,8 @@ namespace QLSV
             picCol = (DataGridViewImageColumn)TableOfStd.Columns[7];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             TableOfStd.AllowUserToAddRows = false;
+            TableOfStd.Columns["bdate"].DefaultCellStyle.Format = "dd/mm/yyyy";
+            TableOfStd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void Print_Load(object sender, EventArgs e)
         {

@@ -37,10 +37,11 @@ namespace QLSV
             this.Cancel = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.StudentIDTextBox = new System.Windows.Forms.TextBox();
-            this.FNameIdTextBox = new System.Windows.Forms.TextBox();
-            this.LNameIdTextBox = new System.Windows.Forms.TextBox();
+            this.FNameTextBox = new System.Windows.Forms.TextBox();
+            this.LNameTextBox = new System.Windows.Forms.TextBox();
             this.SearchIDTextBox = new System.Windows.Forms.TextBox();
             this.AvgGridView = new System.Windows.Forms.DataGridView();
+            this.RefreshBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvgGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,12 +90,13 @@ namespace QLSV
             this.PrintBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.PrintBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.PrintBtn.Location = new System.Drawing.Point(522, 352);
+            this.PrintBtn.Location = new System.Drawing.Point(514, 352);
             this.PrintBtn.Name = "PrintBtn";
             this.PrintBtn.Size = new System.Drawing.Size(153, 45);
             this.PrintBtn.TabIndex = 4;
             this.PrintBtn.Text = "Print";
             this.PrintBtn.UseVisualStyleBackColor = false;
+            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // Cancel
             // 
@@ -106,6 +108,7 @@ namespace QLSV
             this.Cancel.TabIndex = 5;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // SearchBtn
             // 
@@ -117,6 +120,7 @@ namespace QLSV
             this.SearchBtn.TabIndex = 6;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // StudentIDTextBox
             // 
@@ -126,21 +130,21 @@ namespace QLSV
             this.StudentIDTextBox.Size = new System.Drawing.Size(153, 24);
             this.StudentIDTextBox.TabIndex = 7;
             // 
-            // FNameIdTextBox
+            // FNameTextBox
             // 
-            this.FNameIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FNameIdTextBox.Location = new System.Drawing.Point(174, 95);
-            this.FNameIdTextBox.Name = "FNameIdTextBox";
-            this.FNameIdTextBox.Size = new System.Drawing.Size(153, 24);
-            this.FNameIdTextBox.TabIndex = 8;
+            this.FNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FNameTextBox.Location = new System.Drawing.Point(174, 95);
+            this.FNameTextBox.Name = "FNameTextBox";
+            this.FNameTextBox.Size = new System.Drawing.Size(153, 24);
+            this.FNameTextBox.TabIndex = 8;
             // 
-            // LNameIdTextBox
+            // LNameTextBox
             // 
-            this.LNameIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LNameIdTextBox.Location = new System.Drawing.Point(174, 147);
-            this.LNameIdTextBox.Name = "LNameIdTextBox";
-            this.LNameIdTextBox.Size = new System.Drawing.Size(153, 24);
-            this.LNameIdTextBox.TabIndex = 9;
+            this.LNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNameTextBox.Location = new System.Drawing.Point(174, 147);
+            this.LNameTextBox.Name = "LNameTextBox";
+            this.LNameTextBox.Size = new System.Drawing.Size(153, 24);
+            this.LNameTextBox.TabIndex = 9;
             // 
             // SearchIDTextBox
             // 
@@ -159,16 +163,29 @@ namespace QLSV
             this.AvgGridView.Size = new System.Drawing.Size(744, 297);
             this.AvgGridView.TabIndex = 11;
             // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.RefreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshBtn.Location = new System.Drawing.Point(203, 352);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(153, 45);
+            this.RefreshBtn.TabIndex = 12;
+            this.RefreshBtn.Text = "Refresh";
+            this.RefreshBtn.UseVisualStyleBackColor = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
+            // 
             // Result_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(1099, 417);
+            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.AvgGridView);
             this.Controls.Add(this.SearchIDTextBox);
-            this.Controls.Add(this.LNameIdTextBox);
-            this.Controls.Add(this.FNameIdTextBox);
+            this.Controls.Add(this.LNameTextBox);
+            this.Controls.Add(this.FNameTextBox);
             this.Controls.Add(this.StudentIDTextBox);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.Cancel);
@@ -196,9 +213,10 @@ namespace QLSV
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.TextBox StudentIDTextBox;
-        private System.Windows.Forms.TextBox FNameIdTextBox;
-        private System.Windows.Forms.TextBox LNameIdTextBox;
+        private System.Windows.Forms.TextBox FNameTextBox;
+        private System.Windows.Forms.TextBox LNameTextBox;
         private System.Windows.Forms.TextBox SearchIDTextBox;
-        private System.Windows.Forms.DataGridView AvgGridView;
+        private System.Windows.Forms.Button RefreshBtn;
+        public System.Windows.Forms.DataGridView AvgGridView;
     }
 }

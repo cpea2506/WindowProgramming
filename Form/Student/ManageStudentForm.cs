@@ -32,6 +32,8 @@ namespace QLSV
             picCol = (DataGridViewImageColumn)StudentGridView.Columns[7];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             StudentGridView.AllowUserToAddRows = false;
+            StudentGridView.Columns["bdate"].DefaultCellStyle.Format = "dd/mm/yyyy";
+            StudentGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         bool verif()

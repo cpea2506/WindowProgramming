@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLSV
@@ -93,6 +86,7 @@ namespace QLSV
         {
             SqlCommand command = new SqlCommand("SELECT id, fname, lname, bdate FROM std", mydb.getConnection);
             GridViewByOption.DataSource = student.getStudents(command);
+            GridViewByOption.Columns["bdate"].DefaultCellStyle.Format = "dd/mm/yyyy";
             GridViewByOption.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -106,6 +100,7 @@ namespace QLSV
             GridViewByOption.DataSource = student.getStudents(command);
             GridViewByOption.AllowUserToAddRows = false;
             GridViewByOption.ReadOnly = true;
+            GridViewByOption.Columns["bdate"].DefaultCellStyle.Format = "dd/mm/yyyy";
             GridViewByOption.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 

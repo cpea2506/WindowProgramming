@@ -36,7 +36,7 @@ namespace QLSV
             this.AddBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.StudentID = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.SemesterComboBox = new System.Windows.Forms.ComboBox();
             this.SelectedCourseListBox = new System.Windows.Forms.ListBox();
             this.AvailableListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
@@ -112,14 +112,19 @@ namespace QLSV
             this.StudentID.Size = new System.Drawing.Size(272, 26);
             this.StudentID.TabIndex = 6;
             // 
-            // comboBox1
+            // SemesterComboBox
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(186, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(272, 28);
-            this.comboBox1.TabIndex = 7;
+            this.SemesterComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SemesterComboBox.FormattingEnabled = true;
+            this.SemesterComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.SemesterComboBox.Location = new System.Drawing.Point(186, 68);
+            this.SemesterComboBox.Name = "SemesterComboBox";
+            this.SemesterComboBox.Size = new System.Drawing.Size(272, 28);
+            this.SemesterComboBox.TabIndex = 7;
+            this.SemesterComboBox.SelectedIndexChanged += new System.EventHandler(this.SemesterComboBox_SelectedIndexChanged);
             // 
             // SelectedCourseListBox
             // 
@@ -146,7 +151,7 @@ namespace QLSV
             this.ClientSize = new System.Drawing.Size(499, 292);
             this.Controls.Add(this.AvailableListBox);
             this.Controls.Add(this.SelectedCourseListBox);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.SemesterComboBox);
             this.Controls.Add(this.StudentID);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.AddBtn);
@@ -156,7 +161,6 @@ namespace QLSV
             this.Controls.Add(this.label1);
             this.Name = "AddStudentCourseForm";
             this.Text = "AddStudentCourseForm";
-            this.Load += new System.EventHandler(this.AddStudentCourseForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,7 +175,7 @@ namespace QLSV
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.TextBox StudentID;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox SemesterComboBox;
         private System.Windows.Forms.ListBox SelectedCourseListBox;
         private System.Windows.Forms.ListBox AvailableListBox;
     }

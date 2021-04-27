@@ -11,7 +11,7 @@ namespace QLSV
     class MY_DB
     {
         //192.168.1.13
-        SqlConnection con = new SqlConnection(@"Data Source=10.11.43.117;User ID=sa;Password=Anhvien1;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=login_info");
+        SqlConnection con = new SqlConnection(@"Data Source=192.168.1.13;User ID=sa;Password=Anhvien1;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=login_info");
         
         public SqlConnection getConnection
         {

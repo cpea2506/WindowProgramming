@@ -23,11 +23,12 @@ namespace QLSV
         MY_DB mydb = new MY_DB();
         private void StudentListForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM std", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT id,fname,lname, bdate, gender,phone,address, picture FROM std", mydb.getConnection);
             dataGridView1.ReadOnly = true;
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             dataGridView1.RowTemplate.Height = 80;
             dataGridView1.DataSource = student.getStudents(command);
+            dataGridView1.Columns[3].DefaultCellStyle.Format = "dd/mm/yyyy";
             picCol = (DataGridViewImageColumn)dataGridView1.Columns[7];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridView1.AllowUserToAddRows = false;

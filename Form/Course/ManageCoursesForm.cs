@@ -14,6 +14,7 @@ namespace QLSV
     public partial class ManageCoursesForm : Form
     {
         COURSE course = new COURSE();
+        MY_DB mydb = new MY_DB();
         int pos;
         public ManageCoursesForm()
         {
@@ -27,7 +28,8 @@ namespace QLSV
 
         void reloadListBoxData()
         {
-            CourseListBox.DataSource = course.getAllCourse();
+            SqlCommand command = new SqlCommand("SELECT * FROM Course", mydb.getConnection);
+            CourseListBox.DataSource = course.getCourse(command);
             CourseListBox.DisplayMember = "label";
             CourseListBox.ValueMember = "id";
             CourseListBox.SelectedItem = null;
@@ -37,7 +39,8 @@ namespace QLSV
 
         void showData(int pos)
         {
-            DataRow dr = course.getAllCourse().Rows[pos];
+            SqlCommand command = new SqlCommand("SELECT * FROM Course", mydb.getConnection);
+            DataRow dr = course.getCourse(command).Rows[pos];
             CourseListBox.SelectedIndex = pos;
             IDTextBox.Text = dr.ItemArray[0].ToString();
             LabelTextBox.Text = dr.ItemArray[1].ToString();
@@ -65,7 +68,7 @@ namespace QLSV
             }
             else if (course.checkCourseName(label))
             {
-                if (course.insertCourse(id, label, hrs, des))
+                if (course.insertCourse(id, label, hrs, des, 1))
                 {
                     MessageBox.Show("New Course Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     reloadListBoxData();
@@ -173,9 +176,9 @@ namespace QLSV
 
             int cid = Convert.ToInt32(dr.ItemArray[0].ToString());
             csl.SelectedCourseGridView.DataSource = course.getSpecificCourse(cid);
+            csl.SelectedCourseGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            csl.SemesterLabel.Text += dr.ItemArray[4].ToString();
             csl.Show();
         }
     }
-
-
 }

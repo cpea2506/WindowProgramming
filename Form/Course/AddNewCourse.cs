@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLSV
@@ -17,6 +10,7 @@ namespace QLSV
             InitializeComponent();
         }
 
+
         private void AddBtnCourse_Click(object sender, EventArgs e)
         {
             COURSE course = new COURSE();
@@ -24,8 +18,8 @@ namespace QLSV
             string label = LabelTxtb.Text;
             int period = Convert.ToInt32(PeriodTxtb.Text);
             string description = DesTxtb.Text;
+            int semester = Convert.ToInt32(SemesterComboBox.SelectedItem.ToString());
 
-           
             if (period < 10)
             {
                 MessageBox.Show("The Period must larger than 10!", "Invalid Period", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -36,7 +30,7 @@ namespace QLSV
             } 
             else if(course.checkCourseName(label))
             {
-                if(course.insertCourse(id, label, period, description))
+                if(course.insertCourse(id, label, period, description, semester))
                 {
                     MessageBox.Show("New Course Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 } else

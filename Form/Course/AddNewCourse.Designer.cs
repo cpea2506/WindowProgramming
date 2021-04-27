@@ -141,7 +141,12 @@ namespace QLSV
             // 
             this.SemesterComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SemesterComboBox.FormattingEnabled = true;
+            this.SemesterComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
             this.SemesterComboBox.Location = new System.Drawing.Point(358, 21);
+            this.SemesterComboBox.MaxDropDownItems = 3;
             this.SemesterComboBox.Name = "SemesterComboBox";
             this.SemesterComboBox.Size = new System.Drawing.Size(80, 26);
             this.SemesterComboBox.TabIndex = 10;

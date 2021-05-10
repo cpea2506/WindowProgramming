@@ -94,6 +94,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Human Resources\ShowFullListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Human Resources\ShowFullListForm.Designer.cs">
+      <DependentUpon>ShowFullListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Human Resources\EditContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Human Resources\EditContactForm.Designer.cs">
+      <DependentUpon>EditContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Human Resources\AddContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Human Resources\AddContactForm.Designer.cs">
+      <DependentUpon>AddContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Human Resources\CONTACT.cs" />
+    <Compile Include="Form\Human Resources\ContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Human Resources\ContactForm.Designer.cs">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Course\CourseStdList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,7 +155,7 @@
     <Compile Include="Form\Course\AddNewCourse.Designer.cs">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\COURSE.cs" />
+    <Compile Include="Data\Student\COURSE.cs" />
     <Compile Include="Form\Student\AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,14 +168,14 @@
     <Compile Include="Form\Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\MY_DB.cs" />
+    <Compile Include="Data\SQL\MY_DB.cs" />
     <Compile Include="Form\Main\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Main\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Program.cs" />
+    <Compile Include="Data\Student\Program.cs" />
     <Compile Include="Form\Student\Print.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +206,8 @@
     <Compile Include="Form\Student\ManageStudentForm.Designer.cs">
       <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Human Resources\GLOBAL.cs" />
+    <Compile Include="Data\Human Resources\GROUP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form\Main\Register.cs">
       <SubType>Form</SubType>
@@ -188,7 +215,7 @@
     <Compile Include="Form\Main\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\STUDENT.cs" />
+    <Compile Include="Data\Student\STUDENT.cs" />
     <Compile Include="Form\Student\StudentListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,7 +240,7 @@
     <Compile Include="Form\Course\RemoveCourse.Designer.cs">
       <DependentUpon>RemoveCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\SCORE.cs" />
+    <Compile Include="Data\Student\SCORE.cs" />
     <Compile Include="Form\Score\RemoveScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +259,34 @@
     <Compile Include="Form\Result\StaticResult.Designer.cs">
       <DependentUpon>StaticResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Human Resources\USER.cs" />
+    <Compile Include="Form\Human Resources\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Human Resources\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Human Resources\SelectContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Human Resources\SelectContactForm.Designer.cs">
+      <DependentUpon>SelectContactForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Human Resources\ShowFullListForm.resx">
+      <DependentUpon>ShowFullListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Human Resources\AddContactForm.resx">
+      <DependentUpon>AddContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Human Resources\ContactForm.resx">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Human Resources\EditContactForm.resx">
+      <DependentUpon>EditContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Human Resources\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Course\CourseStdList.resx">
       <DependentUpon>CourseStdList.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Result\StaticResult.resx">
       <DependentUpon>StaticResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Human Resources\SelectContactForm.resx">
+      <DependentUpon>SelectContactForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

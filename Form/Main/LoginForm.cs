@@ -58,6 +58,7 @@ namespace QLSV
             reg.Show();
         }
 
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             progressBar1.Value += 10;
@@ -71,8 +72,14 @@ namespace QLSV
 
                 DataTable table = new DataTable();
 
-
-                SqlCommand command = new SqlCommand("SELECT * FROM info WHERE username = @user AND password = @pass", db.getConnection);
+                SqlCommand command = new SqlCommand();
+                if (StudentRadioBtn.Checked)
+                {
+                    command = new SqlCommand("SELECT * FROM info WHERE username = @user AND password = @pass", db.getConnection);
+                } else
+                {
+                    command = new SqlCommand("SELECT * FROM hr WHERE username = @user AND password = @pass", db.getConnection);
+                }
 
                 command.Parameters.Add("@user", SqlDbType.VarChar).Value = usernameTextBox.Text;
                 command.Parameters.Add("@pass", SqlDbType.VarChar).Value = passwordTextBox.Text;
@@ -83,8 +90,20 @@ namespace QLSV
 
                 if (table.Rows.Count > 0)
                 {
-                    MainForm mf = new MainForm();
-                    mf.Show(this);
+
+                    int userId = Convert.ToInt32(table.Rows[0][0].ToString());
+                    GLOBAL.SetGlobalUserId(userId);
+
+                    if(StudentRadioBtn.Checked)
+                    {
+                        MainForm mf = new MainForm();
+                        mf.Show();
+                    } else
+                    {
+                        ContactForm cf = new ContactForm();
+                        cf.Show();
+                    }
+
                     progressBar1.Value = 0;
                     percent.Text = "";
                 }
@@ -95,7 +114,6 @@ namespace QLSV
                     progressBar1.Value = 0;
                     percent.Text = "";
                 }
-
             }
         }
     }

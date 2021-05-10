@@ -1,59 +1,124 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace QLSV
 {
     public partial class Register : Form
     {
+        USER user = new USER();
+        STUDENT student = new STUDENT();
+        loginForm login = new loginForm();
+
         public Register()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        public bool Verif()
+        {
+            if (IDTextBox.Text.Trim() == "" || FnameTextBox.Text.Trim() == "" || LNameTextBox.Text.Trim() == "" || usernameRegisterTextBox.Text.Trim() == ""
+                || passwordRegisterTextBox.Text.Trim() == "" || pictureBoxProfileImage.Image == null) {
+                return false;
+            }
+            
+            return true;
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        MY_DB mydb = new MY_DB();
-        private bool updateRegister(string username, string password)
+        private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO info(username,password) VALUES(@user, @pass)", mydb.getConnection);
-            command.Parameters.Add("@user", SqlDbType.VarChar).Value = username;
-            command.Parameters.Add("@pass", SqlDbType.VarChar).Value = password;
+            int id = Convert.ToInt32(IDTextBox.Text);
+            string fname = FnameTextBox.Text;
+            string lname = LNameTextBox.Text;
+            string username = usernameRegisterTextBox.Text;
+            string password = passwordRegisterTextBox.Text;
+            string opera = "register";
 
-            mydb.openConnection();
-            if(command.ExecuteNonQuery() == 1)
+            MemoryStream pic = new MemoryStream();
+            if (HumanRadioBtn.Checked)
             {
-                mydb.closeConnection();
-                return true;
-            } else
+                if (Verif())
+                {
+                    if (!user.IdExist(id))
+                    {
+                        if (!user.usernameExist(username, opera, id))
+                        {
+                            pictureBoxProfileImage.Image.Save(pic, pictureBoxProfileImage.Image.RawFormat);
+                            if (user.insertUser(fname, lname, username, password, pic, id))
+                            {
+
+                                MessageBox.Show("Registrator Completed Successfully", "Register", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Somethings Wrong", "Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(" This Name Have Already Exists", "Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                        MessageBox.Show("This ID Have Already Exists", "Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Fill All The Information!!!", "Register", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
+            else if (StudentRadioBtn.Checked)
             {
-                mydb.closeConnection();
-                return false;
+                if (Verif())
+                {
+                    if (!student.IdExist(id))
+                    {
+                        if (!student.usernameExist(username, opera, id))
+                        {
+                            pictureBoxProfileImage.Image.Save(pic, pictureBoxProfileImage.Image.RawFormat);
+                            if (student.insertStudentRegister(username, password, id))
+                            {
+                                MessageBox.Show("Registrator Completed Successfully", "Register", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Somethings Wrong", "Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(" This Name Have Already Exists", "Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                        MessageBox.Show("This ID Have Already Exists", "Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Fill All The Information!!!", "Register", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void UploadImageBtn_Click(object sender, EventArgs e)
         {
-            if(passwordRegisterTextBox.Text == confirmPasswordRegisterTextBox.Text)
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Select Image(*.jpg; *.png; *.gif) | *.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
             {
-                string username = usernameRegisterTextBox.Text;
-                string password = passwordRegisterTextBox.Text;
-                if(updateRegister(username, password)) {
-                    MessageBox.Show("Registry Completely", "Registed User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }else
-            {
-                MessageBox.Show("Password Not Match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pictureBoxProfileImage.BackgroundImageLayout = ImageLayout.Stretch;
+                pictureBoxProfileImage.Image = Image.FromFile(opf.FileName);
             }
         }
     }

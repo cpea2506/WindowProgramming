@@ -136,28 +136,28 @@ namespace QLSV
             // 
             this.StudentID.Location = new System.Drawing.Point(132, 26);
             this.StudentID.Name = "StudentID";
-            this.StudentID.Size = new System.Drawing.Size(226, 20);
+            this.StudentID.Size = new System.Drawing.Size(197, 20);
             this.StudentID.TabIndex = 8;
             // 
             // Fname
             // 
             this.Fname.Location = new System.Drawing.Point(132, 67);
             this.Fname.Name = "Fname";
-            this.Fname.Size = new System.Drawing.Size(226, 20);
+            this.Fname.Size = new System.Drawing.Size(197, 20);
             this.Fname.TabIndex = 9;
             // 
             // Lname
             // 
             this.Lname.Location = new System.Drawing.Point(132, 102);
             this.Lname.Name = "Lname";
-            this.Lname.Size = new System.Drawing.Size(226, 20);
+            this.Lname.Size = new System.Drawing.Size(197, 20);
             this.Lname.TabIndex = 10;
             // 
             // Phone
             // 
             this.Phone.Location = new System.Drawing.Point(132, 217);
             this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(226, 20);
+            this.Phone.Size = new System.Drawing.Size(197, 20);
             this.Phone.TabIndex = 11;
             // 
             // Address
@@ -165,15 +165,16 @@ namespace QLSV
             this.Address.Location = new System.Drawing.Point(132, 246);
             this.Address.Multiline = true;
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(226, 84);
+            this.Address.Size = new System.Drawing.Size(197, 75);
             this.Address.TabIndex = 12;
             // 
             // Bdate
             // 
             this.Bdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Bdate.Location = new System.Drawing.Point(132, 137);
             this.Bdate.Name = "Bdate";
-            this.Bdate.Size = new System.Drawing.Size(226, 22);
+            this.Bdate.Size = new System.Drawing.Size(197, 22);
             this.Bdate.TabIndex = 13;
             // 
             // Male
@@ -192,7 +193,7 @@ namespace QLSV
             // 
             this.Female.AutoSize = true;
             this.Female.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Female.Location = new System.Drawing.Point(272, 182);
+            this.Female.Location = new System.Drawing.Point(260, 182);
             this.Female.Name = "Female";
             this.Female.Size = new System.Drawing.Size(59, 17);
             this.Female.TabIndex = 15;
@@ -204,9 +205,9 @@ namespace QLSV
             // 
             this.UploadImgBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.UploadImgBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadImgBtn.Location = new System.Drawing.Point(132, 439);
+            this.UploadImgBtn.Location = new System.Drawing.Point(132, 430);
             this.UploadImgBtn.Name = "UploadImgBtn";
-            this.UploadImgBtn.Size = new System.Drawing.Size(226, 23);
+            this.UploadImgBtn.Size = new System.Drawing.Size(197, 30);
             this.UploadImgBtn.TabIndex = 17;
             this.UploadImgBtn.Text = "Upload Image";
             this.UploadImgBtn.UseVisualStyleBackColor = false;
@@ -216,9 +217,9 @@ namespace QLSV
             // 
             this.AddBtn.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.Location = new System.Drawing.Point(12, 487);
+            this.AddBtn.Location = new System.Drawing.Point(30, 487);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(176, 80);
+            this.AddBtn.Size = new System.Drawing.Size(125, 43);
             this.AddBtn.TabIndex = 18;
             this.AddBtn.Text = "Add";
             this.AddBtn.UseVisualStyleBackColor = false;
@@ -232,7 +233,7 @@ namespace QLSV
             this.CancelBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.CancelBtn.Location = new System.Drawing.Point(204, 487);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(176, 80);
+            this.CancelBtn.Size = new System.Drawing.Size(127, 43);
             this.CancelBtn.TabIndex = 19;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = false;
@@ -244,7 +245,7 @@ namespace QLSV
             this.PictureBoxStudentImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureBoxStudentImage.Location = new System.Drawing.Point(132, 336);
             this.PictureBoxStudentImage.Name = "PictureBoxStudentImage";
-            this.PictureBoxStudentImage.Size = new System.Drawing.Size(226, 97);
+            this.PictureBoxStudentImage.Size = new System.Drawing.Size(197, 88);
             this.PictureBoxStudentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxStudentImage.TabIndex = 16;
             this.PictureBoxStudentImage.TabStop = false;
@@ -254,7 +255,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSalmon;
-            this.ClientSize = new System.Drawing.Size(392, 576);
+            this.ClientSize = new System.Drawing.Size(365, 544);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.UploadImgBtn);

@@ -157,9 +157,9 @@ namespace QLSV
             // 
             this.EditBtn.BackColor = System.Drawing.Color.Aquamarine;
             this.EditBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.Location = new System.Drawing.Point(30, 508);
+            this.EditBtn.Location = new System.Drawing.Point(30, 504);
             this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(129, 47);
+            this.EditBtn.Size = new System.Drawing.Size(129, 40);
             this.EditBtn.TabIndex = 18;
             this.EditBtn.Text = "Edit";
             this.EditBtn.UseVisualStyleBackColor = false;
@@ -171,9 +171,9 @@ namespace QLSV
             this.CancelBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CancelBtn.Location = new System.Drawing.Point(206, 508);
+            this.CancelBtn.Location = new System.Drawing.Point(206, 504);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(129, 47);
+            this.CancelBtn.Size = new System.Drawing.Size(129, 40);
             this.CancelBtn.TabIndex = 19;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = false;
@@ -249,7 +249,7 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(351, 567);
+            this.ClientSize = new System.Drawing.Size(351, 554);
             this.Controls.Add(this.SelectBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.IDTextBox);

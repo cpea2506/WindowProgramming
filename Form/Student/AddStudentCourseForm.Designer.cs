@@ -34,7 +34,6 @@ namespace QLSV
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.AddBtn = new System.Windows.Forms.Button();
-            this.SaveBtn = new System.Windows.Forms.Button();
             this.StudentID = new System.Windows.Forms.TextBox();
             this.SemesterComboBox = new System.Windows.Forms.ComboBox();
             this.SelectedCourseListBox = new System.Windows.Forms.ListBox();
@@ -85,24 +84,13 @@ namespace QLSV
             // 
             this.AddBtn.BackColor = System.Drawing.Color.HotPink;
             this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.Location = new System.Drawing.Point(203, 149);
+            this.AddBtn.Location = new System.Drawing.Point(203, 190);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(97, 57);
             this.AddBtn.TabIndex = 4;
             this.AddBtn.Text = "Add";
             this.AddBtn.UseVisualStyleBackColor = false;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.SaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtn.Location = new System.Drawing.Point(203, 222);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(97, 57);
-            this.SaveBtn.TabIndex = 5;
-            this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = false;
             // 
             // StudentID
             // 
@@ -153,7 +141,6 @@ namespace QLSV
             this.Controls.Add(this.SelectedCourseListBox);
             this.Controls.Add(this.SemesterComboBox);
             this.Controls.Add(this.StudentID);
-            this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -173,7 +160,6 @@ namespace QLSV
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.TextBox StudentID;
         private System.Windows.Forms.ComboBox SemesterComboBox;
         private System.Windows.Forms.ListBox SelectedCourseListBox;

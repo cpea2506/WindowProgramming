@@ -294,7 +294,7 @@ namespace QLSV
             this.RemoveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.RemoveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.RemoveBtn.Location = new System.Drawing.Point(405, 489);
+            this.RemoveBtn.Location = new System.Drawing.Point(408, 489);
             this.RemoveBtn.Name = "RemoveBtn";
             this.RemoveBtn.Size = new System.Drawing.Size(161, 45);
             this.RemoveBtn.TabIndex = 24;
@@ -384,7 +384,7 @@ namespace QLSV
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ManageStudentForm";
-            this.Text = "AddStudentForm";
+            this.Text = "ManageStudentForm";
             this.Load += new System.EventHandler(this.ManageStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStudentImage)).EndInit();

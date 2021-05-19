@@ -48,7 +48,7 @@ namespace QLSV
 
                     byte[] pic = (byte[])table.Rows[0]["picture"];
                     MemoryStream picture = new MemoryStream(pic);
-                    PictureBox.Image = Image.FromStream(picture);
+                    StudentPictureBox.Image = Image.FromStream(picture);
                 }
                 else
                 {
@@ -74,7 +74,7 @@ namespace QLSV
                 opf.Filter = "Select Image(*.jpg;*.png;*.gif;*.jpeg)|*.jpg;*.png;*.gif;*.jpeg";
                 if (opf.ShowDialog() == DialogResult.OK)
                 {
-                    PictureBox.Image = Image.FromFile(opf.FileName);
+                    StudentPictureBox.Image = Image.FromFile(opf.FileName);
                 }
         }
 
@@ -94,7 +94,7 @@ namespace QLSV
                         AddressTextBox.Text = "";
                         PhoneTextBox.Text = "";
                         BdateBox.Value = DateTime.Now;
-                        PictureBox.Image = null;
+                        StudentPictureBox.Image = null;
                     } else
                     {
                         MessageBox.Show("Student Not Deleted", "Delete Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -111,7 +111,7 @@ namespace QLSV
             return !(IDTextBox.Text.Trim() == ""
                 || LNameTextBox.Text.Trim() == ""
                 || FnameTextBox.Text.Trim() == ""
-                || PictureBox.Image == null);
+                || StudentPictureBox.Image == null);
         }
 
         private void Edit_Click(object sender, EventArgs e)
@@ -143,7 +143,7 @@ namespace QLSV
                 try
                 {
                     id = Convert.ToInt32(IDTextBox.Text);
-                    PictureBox.Image.Save(pic, PictureBox.Image.RawFormat);
+                    StudentPictureBox.Image.Save(pic, StudentPictureBox.Image.RawFormat);
                     if (student.updateStudent(id, fname, lname, bdate, gender, phone, address, pic))
                     {
                         MessageBox.Show("Student Information Update", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Information);

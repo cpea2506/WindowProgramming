@@ -49,9 +49,9 @@ namespace QLSV
             this.FemaleRadio = new System.Windows.Forms.RadioButton();
             this.Address = new System.Windows.Forms.Label();
             this.Picture = new System.Windows.Forms.Label();
-            this.PictureBox = new System.Windows.Forms.PictureBox();
+            this.StudentPictureBox = new System.Windows.Forms.PictureBox();
             this.AddCourseBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ID
@@ -257,15 +257,15 @@ namespace QLSV
             this.Picture.TabIndex = 20;
             this.Picture.Text = "Picture";
             // 
-            // PictureBox
+            // StudentPictureBox
             // 
-            this.PictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PictureBox.Location = new System.Drawing.Point(504, 141);
-            this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(206, 110);
-            this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox.TabIndex = 21;
-            this.PictureBox.TabStop = false;
+            this.StudentPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.StudentPictureBox.Location = new System.Drawing.Point(504, 141);
+            this.StudentPictureBox.Name = "StudentPictureBox";
+            this.StudentPictureBox.Size = new System.Drawing.Size(206, 110);
+            this.StudentPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.StudentPictureBox.TabIndex = 21;
+            this.StudentPictureBox.TabStop = false;
             // 
             // AddCourseBtn
             // 
@@ -286,7 +286,7 @@ namespace QLSV
             this.BackColor = System.Drawing.Color.LightPink;
             this.ClientSize = new System.Drawing.Size(722, 425);
             this.Controls.Add(this.AddCourseBtn);
-            this.Controls.Add(this.PictureBox);
+            this.Controls.Add(this.StudentPictureBox);
             this.Controls.Add(this.Picture);
             this.Controls.Add(this.Address);
             this.Controls.Add(this.FemaleRadio);
@@ -309,7 +309,7 @@ namespace QLSV
             this.Controls.Add(this.ID);
             this.Name = "UpdateDeleteStudentForm";
             this.Text = "UpdateDeleteStudentForm";
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +335,7 @@ namespace QLSV
         public System.Windows.Forms.TextBox LNameTextBox;
         public System.Windows.Forms.TextBox AddressTextBox;
         public System.Windows.Forms.DateTimePicker BdateBox;
-        public System.Windows.Forms.PictureBox PictureBox;
+        public System.Windows.Forms.PictureBox StudentPictureBox;
         public System.Windows.Forms.RadioButton MaleRadio;
         public System.Windows.Forms.RadioButton FemaleRadio;
         private System.Windows.Forms.Button AddCourseBtn;

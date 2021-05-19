@@ -29,20 +29,20 @@ namespace QLSV
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StudentGridView = new System.Windows.Forms.DataGridView();
             this.RefreshBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // StudentGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 367);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGriview1_DoubleClick);
+            this.StudentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentGridView.Location = new System.Drawing.Point(12, 12);
+            this.StudentGridView.Name = "StudentGridView";
+            this.StudentGridView.RowHeadersWidth = 82;
+            this.StudentGridView.Size = new System.Drawing.Size(843, 367);
+            this.StudentGridView.TabIndex = 0;
+            this.StudentGridView.DoubleClick += new System.EventHandler(this.DataGriview1_DoubleClick);
             // 
             // RefreshBtn
             // 
@@ -62,18 +62,18 @@ namespace QLSV
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 458);
             this.Controls.Add(this.RefreshBtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.StudentGridView);
             this.Name = "StudentListForm";
             this.Text = "StudentListForm";
             this.Load += new System.EventHandler(this.StudentListForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView StudentGridView;
         private System.Windows.Forms.Button RefreshBtn;
     }
 }

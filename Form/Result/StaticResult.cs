@@ -112,13 +112,20 @@ namespace QLSV
             ResultChart.Series["Result"].XValueMember = "Result";
             ResultChart.Series["Result"].YValueMembers = "Value";
         }
+
+        private double getRoundNum(Object Num)
+        {
+            return Math.Round(double.Parse(Num.ToString()), 2);
+        }
+
         private void StaticResult_Load(object sender, EventArgs e)
         {
             DataTable table = score.getAvgScoreByCourse();
             for(int i = 0; i < table.Rows.Count; i++)
             {
                 Label courseLabel = new Label();
-                courseLabel.Text = table.Rows[i][0].ToString() + ": " +  table.Rows[i][1].ToString();
+                string avg = getRoundNum(table.Rows[i][1]).ToString();
+                courseLabel.Text = table.Rows[i][0].ToString() + ": " + avg;
                 courseLabel.Location = new Point(70, 80 + i * 50);
                 courseLabel.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Bold);
                 courseLabel.ForeColor = Color.Yellow;

@@ -42,7 +42,7 @@ namespace QLSV
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.RegisterLabel = new System.Windows.Forms.LinkLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.percent = new System.Windows.Forms.Label();
             this.StudentRadioBtn = new System.Windows.Forms.RadioButton();
@@ -57,9 +57,9 @@ namespace QLSV
             // 
             this.loginBtn.BackColor = System.Drawing.Color.Salmon;
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(65, 309);
+            this.loginBtn.Location = new System.Drawing.Point(36, 307);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(155, 61);
+            this.loginBtn.Size = new System.Drawing.Size(135, 48);
             this.loginBtn.TabIndex = 0;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -69,9 +69,9 @@ namespace QLSV
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.PaleGreen;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(300, 309);
+            this.cancelBtn.Location = new System.Drawing.Point(223, 307);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(155, 61);
+            this.cancelBtn.Size = new System.Drawing.Size(135, 48);
             this.cancelBtn.TabIndex = 1;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -81,7 +81,7 @@ namespace QLSV
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 140);
+            this.label1.Location = new System.Drawing.Point(61, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace QLSV
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 202);
+            this.label2.Location = new System.Drawing.Point(58, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 3;
@@ -101,7 +101,7 @@ namespace QLSV
             // 
             this.errorProvider1.SetError(this.usernameTextBox, "Invalid Username");
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(242, 135);
+            this.usernameTextBox.Location = new System.Drawing.Point(192, 143);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(227, 26);
             this.usernameTextBox.TabIndex = 4;
@@ -112,7 +112,7 @@ namespace QLSV
             // 
             this.errorProvider2.SetError(this.passwordTextBox, "Invalid Password");
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(242, 202);
+            this.passwordTextBox.Location = new System.Drawing.Point(192, 210);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(227, 26);
@@ -124,11 +124,11 @@ namespace QLSV
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(194, 22);
+            this.label3.Location = new System.Drawing.Point(166, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 31);
+            this.label3.Size = new System.Drawing.Size(290, 31);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Account Login";
+            this.label3.Text = "Student Management";
             // 
             // toolTip1
             // 
@@ -149,9 +149,9 @@ namespace QLSV
             // progressBar1
             // 
             this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.progressBar1.Location = new System.Drawing.Point(190, 77);
+            this.progressBar1.Location = new System.Drawing.Point(172, 77);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(302, 30);
+            this.progressBar1.Size = new System.Drawing.Size(274, 30);
             this.progressBar1.Step = 100;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 9;
@@ -164,17 +164,17 @@ namespace QLSV
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // linkLabel1
+            // RegisterLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(423, 32);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 20);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Register";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.RegisterLabel.AutoSize = true;
+            this.RegisterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterLabel.Location = new System.Drawing.Point(387, 335);
+            this.RegisterLabel.Name = "RegisterLabel";
+            this.RegisterLabel.Size = new System.Drawing.Size(69, 20);
+            this.RegisterLabel.TabIndex = 10;
+            this.RegisterLabel.TabStop = true;
+            this.RegisterLabel.Text = "Register";
+            this.RegisterLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // timer1
             // 
@@ -195,7 +195,7 @@ namespace QLSV
             // 
             this.StudentRadioBtn.AutoSize = true;
             this.StudentRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentRadioBtn.Location = new System.Drawing.Point(94, 261);
+            this.StudentRadioBtn.Location = new System.Drawing.Point(66, 268);
             this.StudentRadioBtn.Name = "StudentRadioBtn";
             this.StudentRadioBtn.Size = new System.Drawing.Size(84, 24);
             this.StudentRadioBtn.TabIndex = 12;
@@ -207,7 +207,7 @@ namespace QLSV
             // 
             this.HumanRadioBtn.AutoSize = true;
             this.HumanRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HumanRadioBtn.Location = new System.Drawing.Point(275, 261);
+            this.HumanRadioBtn.Location = new System.Drawing.Point(259, 268);
             this.HumanRadioBtn.Name = "HumanRadioBtn";
             this.HumanRadioBtn.Size = new System.Drawing.Size(160, 24);
             this.HumanRadioBtn.TabIndex = 13;
@@ -219,10 +219,10 @@ namespace QLSV
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.HSplit;
-            this.pictureBox1.Image = global::QLSV.Properties.Resources.LoginImage;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 12);
+            this.pictureBox1.Image = global::QLSV.Properties.Resources.LoginImage2;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -232,11 +232,11 @@ namespace QLSV
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(501, 392);
+            this.ClientSize = new System.Drawing.Size(458, 364);
             this.Controls.Add(this.HumanRadioBtn);
             this.Controls.Add(this.StudentRadioBtn);
             this.Controls.Add(this.percent);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.RegisterLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -271,7 +271,7 @@ namespace QLSV
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel RegisterLabel;
         public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label percent;
         private System.Windows.Forms.RadioButton HumanRadioBtn;

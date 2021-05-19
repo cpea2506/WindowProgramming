@@ -48,7 +48,6 @@ namespace QLSV
             this.removeScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avgScoreByCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staticsResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -178,8 +177,7 @@ namespace QLSV
             this.addScoreToolStripMenuItem,
             this.removeScoreToolStripMenuItem,
             this.manageScoreToolStripMenuItem,
-            this.avgScoreByCourseToolStripMenuItem,
-            this.printResultToolStripMenuItem});
+            this.avgScoreByCourseToolStripMenuItem});
             this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
             this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(55, 22);
             this.sCOREToolStripMenuItem.Text = "SCORE";
@@ -212,12 +210,6 @@ namespace QLSV
             this.avgScoreByCourseToolStripMenuItem.Text = "Avg Score By Course";
             this.avgScoreByCourseToolStripMenuItem.Click += new System.EventHandler(this.avgScoreByCourseToolStripMenuItem_Click);
             // 
-            // printResultToolStripMenuItem
-            // 
-            this.printResultToolStripMenuItem.Name = "printResultToolStripMenuItem";
-            this.printResultToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.printResultToolStripMenuItem.Text = "Print Result";
-            // 
             // rESULTToolStripMenuItem
             // 
             this.rESULTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -230,14 +222,14 @@ namespace QLSV
             // avgToolStripMenuItem
             // 
             this.avgToolStripMenuItem.Name = "avgToolStripMenuItem";
-            this.avgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.avgToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.avgToolStripMenuItem.Text = "Avg Result By Score";
             this.avgToolStripMenuItem.Click += new System.EventHandler(this.avgToolStripMenuItem_Click);
             // 
             // staticsResultToolStripMenuItem
             // 
             this.staticsResultToolStripMenuItem.Name = "staticsResultToolStripMenuItem";
-            this.staticsResultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.staticsResultToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.staticsResultToolStripMenuItem.Text = "Statics Result";
             this.staticsResultToolStripMenuItem.Click += new System.EventHandler(this.staticsResultToolStripMenuItem_Click);
             // 
@@ -278,7 +270,6 @@ namespace QLSV
         private System.Windows.Forms.ToolStripMenuItem removeScoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageScoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avgScoreByCourseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printResultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rESULTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avgToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staticsResultToolStripMenuItem;
